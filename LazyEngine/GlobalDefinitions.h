@@ -1,0 +1,11 @@
+#ifndef GLOBAL_DEFINITIONS_H
+#define GLOBAL_DEFINITIONS_H
+
+typedef enum eAPI_TYPE
+{
+	API_TYPE_DX11,
+	API_TYPE_OPENGL, 
+	API_TYPE_VULKAN,
+}eAPI_TYPE;
+
+#endif 
