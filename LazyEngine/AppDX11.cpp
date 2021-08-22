@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "AppDX11.h"
 #include "SystemDX11.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 namespace lazy
 {
@@ -31,6 +33,9 @@ namespace lazy
 	{
 		while (!glfwWindowShouldClose(m_MainWindow->getWindow()))
 		{
+			// Render a frame
+			m_Device->m_DevCon->ClearRenderTargetView(m_Device->m_BackBuffer, glm::value_ptr(glm::vec4(0.0f, 0.2f, 0.4f, 1.0f)));
+			m_SwapChain->m_SwapChain->Present(0,0);
 			glfwPollEvents(); 
 		}
 	}

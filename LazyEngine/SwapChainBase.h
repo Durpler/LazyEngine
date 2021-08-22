@@ -8,6 +8,9 @@ namespace lazy
 	public: 
 		SwapChainBase() { OnCreate();  }
 		~SwapChainBase() { OnDestroy(); }
+
+		virtual void OnCreate() {};
+		virtual void OnDestroy() {};
 	};
 }
 

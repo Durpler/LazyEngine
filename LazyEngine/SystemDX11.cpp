@@ -34,10 +34,36 @@ namespace lazy
             NULL,
             &device.m_DevCon) != S_OK)
         {
-            std::cout << "Failed to create D3D11 device and swapchain" << std::endl; 
+            std::cout << "FAILED to create D3D11 device and swapchain" << std::endl; 
             return false; 
-        }                  
+        }
+        std::cout << "SUCCESS in creating D3D11 device and swapchain" << std::endl; 
+        
+        // set the render target
 
+        // get the address of the backbuffer
+        ID3D11Texture2D* pBackBuffer; 
+        swapChain.m_SwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+
+        // use the back buffer address to create the render target
+        device.m_Device->CreateRenderTargetView(pBackBuffer, NULL, &device.m_BackBuffer);
+        pBackBuffer->Release(); 
+
+        //set the render target as the back buffer
+        device.m_DevCon->OMSetRenderTargets(1, &device.m_BackBuffer, NULL); 
+
+
+        // set the viewport
+        D3D11_VIEWPORT viewport; 
+        memset(&viewport, 0, sizeof(D3D11_VIEWPORT)); 
+
+        viewport.TopLeftX = 0; 
+        viewport.TopLeftY = 0; 
+        // TODO: take parameters from glfw-window
+        viewport.Width = 1280; // this needs to be taken from the glfw-window
+        viewport.Height = 720;  // this needs to be taken from the GLFW window
+
+        device.m_DevCon->RSSetViewports(1, &viewport); 
         return true;
     }
 

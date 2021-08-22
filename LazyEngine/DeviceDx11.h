@@ -18,6 +18,8 @@ namespace lazy
 	
 		ID3D11Device* m_Device; 
 		ID3D11DeviceContext* m_DevCon; 
+
+		ID3D11RenderTargetView* m_BackBuffer; 
 	};
 }
 

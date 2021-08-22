@@ -4,9 +4,11 @@
 #include <d3d11.h>
 #include <memory>
 
+#include "SwapChainBase.h"
+
 namespace lazy
 {
-	class SwapChainDX11
+	class SwapChainDX11 : SwapChainBase
 	{
 	public: 
 		SwapChainDX11(); 
