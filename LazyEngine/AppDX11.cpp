@@ -28,7 +28,7 @@ namespace lazy
 	}
 	void AppDX11::OnCreate()
 	{
-		m_ApplicationName = "DirectX 11 Application"; 
+		m_ApplicationName += " DX11";
 		m_Width = 1280; 
 		m_Height = 720; 
 		initialize(); 

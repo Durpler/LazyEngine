@@ -25,6 +25,15 @@
     <Filter Include="Header Files\Common">
       <UniqueIdentifier>{43a9716b-f16e-4c73-a142-a658db649467}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{ccd2b9bc-9138-4e7e-be56-75a7530786e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{859f414c-ac55-4baa-b37c-6f20d909561c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dx11">
+      <UniqueIdentifier>{ac1a8d5e-d13e-4363-b14d-25244ba0e026}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -54,16 +63,31 @@
     <ClInclude Include="AppDX11.h">
       <Filter>Header Files\Dx11</Filter>
     </ClInclude>
+    <ClInclude Include="LazyLogger.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapChainDX11.h">
+      <Filter>Header Files\Dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemDX11.h">
+      <Filter>Header Files\Dx11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LazyWindow.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
     <ClCompile Include="AppDX11.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapChainDX11.cpp">
+      <Filter>Source Files\Dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemDX11.cpp">
+      <Filter>Source Files\Dx11</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

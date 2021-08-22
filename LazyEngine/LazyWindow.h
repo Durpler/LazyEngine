@@ -20,6 +20,9 @@ namespace lazy
 		inline int getHeight() { return m_Height; }
 
 		inline GLFWwindow* getWindow() { return m_Window; }
+#ifdef WITH_DIRECTX_11
+		inline HWND getHwnd() { return glfwGetWin32Window(m_Window); }
+#endif 
 
 	private: 
 		int m_Width{ 0 };

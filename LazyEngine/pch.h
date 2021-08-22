@@ -8,6 +8,7 @@
 #define PCH_H
 
 #ifdef WITH_DIRECTX_11
+#define GLFW_EXPOSE_NATIVE_WIN32
 // directX11 includes
 #include <d3d11.h>
 #include <d3dcompiler.h>
@@ -20,8 +21,10 @@
 #endif
 
 
+
 // add headers that you want to pre-compile here
 #include<GLFW/glfw3.h>
+#include <GLFW/glfw3native.h>
 // link glfw
 #pragma comment(lib, "glfw3.lib")
 

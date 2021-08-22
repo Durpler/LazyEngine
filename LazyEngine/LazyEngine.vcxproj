@@ -163,9 +163,12 @@
     <ClInclude Include="GlobalDefinitions.h" />
     <ClInclude Include="AppBase.h" />
     <ClInclude Include="LazyWindow.h" />
+    <ClInclude Include="LazyLogger.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="SwapChainBase.h" />
+    <ClInclude Include="SwapChainDX11.h" />
     <ClInclude Include="SystemBase.h" />
+    <ClInclude Include="SystemDX11.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppDX11.cpp" />
@@ -176,6 +179,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SwapChainDX11.cpp" />
+    <ClCompile Include="SystemDX11.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

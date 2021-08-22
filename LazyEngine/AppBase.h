@@ -27,7 +27,7 @@ namespace lazy
 		AppBase operator=(const AppBase& other) = delete;
 
 		/// <summary>
-		/// ATTRIBUTES
+		/// METHODS
 		/// </summary>
 		virtual void OnCreate() { initialize(); }
 		virtual void OnDestroy() {}
@@ -35,7 +35,9 @@ namespace lazy
 		virtual bool initialize() { return true;  }
 		virtual void run() {}
 
-
+		/// <summary>
+		/// Attributes
+		/// </summary>
 		std::string m_ApplicationName{ "LazyApp" };
 
 		int m_Width{ 1280 };
@@ -43,7 +45,7 @@ namespace lazy
 
 		
 	protected: 
-		std::unique_ptr<DeviceBase> m_Device; 
+		
 		std::unique_ptr<LazyWindow> m_MainWindow; 
 		
 	};
