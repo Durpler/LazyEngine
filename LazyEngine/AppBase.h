@@ -32,7 +32,8 @@ namespace lazy
 		virtual void OnCreate() { initialize(); }
 		virtual void OnDestroy() {}
 
-		virtual bool initialize() {}
+		virtual bool initialize() { return true;  }
+		virtual void run() {}
 
 
 		std::string m_ApplicationName{ "LazyApp" };
@@ -41,7 +42,7 @@ namespace lazy
 		int m_Height{ 720 };
 
 		
-	private: 
+	protected: 
 		std::unique_ptr<DeviceBase> m_Device; 
 		std::unique_ptr<LazyWindow> m_MainWindow; 
 		

@@ -29,6 +29,10 @@
 #include <glm/glm.hpp>
 
 
+//std
+#include <iostream>
+
+
 // Safely release a COM object.
 template<typename T>
 inline void SafeRelease(T & ptr)

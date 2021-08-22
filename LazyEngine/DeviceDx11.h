@@ -3,7 +3,7 @@
 
 namespace lazy
 {
-	class DeviceDx11
+	class DeviceDX11
 	{
 
 	};

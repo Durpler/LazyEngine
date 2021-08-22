@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LazyEngine", "LazyEngine\LazyEngine.vcxproj", "{2653E184-4526-4B31-A81D-54AD27E8148F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LazyExample", "LazyExample\LazyExample.vcxproj", "{C2473CC4-608A-438B-849D-CCC8F60C0E5F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2653E184-4526-4B31-A81D-54AD27E8148F} = {2653E184-4526-4B31-A81D-54AD27E8148F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +26,14 @@ Global
 		{2653E184-4526-4B31-A81D-54AD27E8148F}.Release|x64.Build.0 = Release|x64
 		{2653E184-4526-4B31-A81D-54AD27E8148F}.Release|x86.ActiveCfg = Release|Win32
 		{2653E184-4526-4B31-A81D-54AD27E8148F}.Release|x86.Build.0 = Release|Win32
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Debug|x64.ActiveCfg = Debug|x64
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Debug|x64.Build.0 = Debug|x64
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Debug|x86.Build.0 = Debug|Win32
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Release|x64.ActiveCfg = Release|x64
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Release|x64.Build.0 = Release|x64
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Release|x86.ActiveCfg = Release|Win32
+		{C2473CC4-608A-438B-849D-CCC8F60C0E5F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

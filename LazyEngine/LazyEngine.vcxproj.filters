@@ -36,7 +36,7 @@
     <ClInclude Include="DeviceBase.h">
       <Filter>Header Files\Base</Filter>
     </ClInclude>
-    <ClInclude Include="DeviceDx11.h">
+    <ClInclude Include="DeviceDX11.h">
       <Filter>Header Files\Dx11</Filter>
     </ClInclude>
     <ClInclude Include="LazyWindow.h">
@@ -60,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LazyWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDX11.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
