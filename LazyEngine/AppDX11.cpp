@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "AppDX11.h"
+#include "SystemDX11.h"
+
 namespace lazy
 {
 	bool AppDX11::initialize()
@@ -16,6 +18,12 @@ namespace lazy
 
 		LazyWindow window(m_Width, m_Height, m_ApplicationName.c_str()); 
 		m_MainWindow = std::make_unique<LazyWindow>(window); 
+
+		m_Device = new DeviceDX11(); 
+		m_SwapChain = new SwapChainDX11(); 
+
+
+		SystemDX11::InitializeDirectX11(*m_MainWindow, *m_Device, *m_SwapChain);
 
 		return true;
 	}

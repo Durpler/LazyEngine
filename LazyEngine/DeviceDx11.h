@@ -12,12 +12,12 @@ namespace lazy
 		DeviceDX11() {};
 		~DeviceDX11() {};
 
-		inline ID3D11Device* getDevice() { return *m_Device; }
-		inline ID3D11DeviceContext* getContext() { return *m_DevCon; }
+		inline ID3D11Device* getDevice() { return m_Device; }
+		inline ID3D11DeviceContext* getContext() { return m_DevCon; }
 
-	private: 
-		std::unique_ptr<ID3D11Device*> m_Device; 
-		std::unique_ptr<ID3D11DeviceContext*> m_DevCon; 
+	
+		ID3D11Device* m_Device; 
+		ID3D11DeviceContext* m_DevCon; 
 	};
 }
 

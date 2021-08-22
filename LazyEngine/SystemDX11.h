@@ -14,6 +14,7 @@ namespace lazy
 {
 	class SystemDX11 : SystemBase
 	{
+	public: 
 		static bool InitializeDirectX11(LazyWindow& outputWindow, DeviceDX11& device, SwapChainDX11& swapChain); 
 		
 	};

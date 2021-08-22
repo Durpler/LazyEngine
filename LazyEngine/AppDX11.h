@@ -2,6 +2,9 @@
 #define APP_DX11_H
 // lazy engine
 #include "AppBase.h"
+#include "DeviceDX11.h"
+#include "SwapChainDX11.h"
+
 
 namespace lazy
 {
@@ -19,6 +22,13 @@ namespace lazy
 		void run() override; 
 		void OnCreate() override; 
 		void OnDestroy() override; 
+
+	private: 
+		DeviceDX11* m_Device;
+		SwapChainDX11* m_SwapChain;
+
+
+
 		
 	};
 }
