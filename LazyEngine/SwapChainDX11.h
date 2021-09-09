@@ -12,12 +12,16 @@ namespace lazy
 	{
 	public: 
 		SwapChainDX11(); 
-		~SwapChainDX11(); 
+		~SwapChainDX11();
 
+		
+	
 		
 	public: 
 		IDXGISwapChain* m_SwapChain;
 		DXGI_SWAP_CHAIN_DESC m_SwapChainDesc; 
+		ID3D11RenderTargetView* m_BackBuffer;
+
 	};
 }
 #endif

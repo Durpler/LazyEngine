@@ -9,7 +9,11 @@ namespace lazy
 	class DeviceDX11
 	{
 	public: 
-		DeviceDX11() {};
+		DeviceDX11() {
+			m_Device = nullptr; 
+			m_DevCon = nullptr; 
+
+		};
 		~DeviceDX11() {};
 
 		inline ID3D11Device* getDevice() { return m_Device; }
@@ -19,7 +23,6 @@ namespace lazy
 		ID3D11Device* m_Device; 
 		ID3D11DeviceContext* m_DevCon; 
 
-		ID3D11RenderTargetView* m_BackBuffer; 
 	};
 }
 

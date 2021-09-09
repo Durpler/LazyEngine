@@ -81,8 +81,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)ThirdParty/glfw3/include/;$(SolutionDir)ThirdParty/glm/include/;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)ThirdParty/glfw3/debug/lib/;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)ThirdParty/glfw3/include/;$(SolutionDir)ThirdParty/glm/include/;$(SolutionDir)ThirdParty/easyloggingpp/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ThirdParty/glfw3/debug/lib/;$(SolutionDir)ThirdParty/spdlog/debug/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -158,13 +158,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AppDX11.h" />
+    <ClInclude Include="BaseMesh.h" />
     <ClInclude Include="DeviceBase.h" />
     <ClInclude Include="DeviceDX11.h" />
+    <ClInclude Include="easylogging++.h" />
     <ClInclude Include="GlobalDefinitions.h" />
     <ClInclude Include="AppBase.h" />
+    <ClInclude Include="LazyMeshFactory.h" />
+    <ClInclude Include="LazyStaticMesh.h" />
+    <ClInclude Include="LazyStructs.h" />
     <ClInclude Include="LazyWindow.h" />
-    <ClInclude Include="LazyLogger.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RendererBase.h" />
     <ClInclude Include="SwapChainBase.h" />
     <ClInclude Include="SwapChainDX11.h" />
     <ClInclude Include="SystemBase.h" />
@@ -172,6 +177,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppDX11.cpp" />
+    <ClCompile Include="easylogging++.cc" />
+    <ClCompile Include="LazyMeshFactory.cpp" />
     <ClCompile Include="LazyWindow.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

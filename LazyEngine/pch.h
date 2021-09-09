@@ -31,9 +31,9 @@
 #define GLM_FORCE_RADIANS
 #include <glm/glm.hpp>
 
-
 //std
 #include <iostream>
+#include "easylogging++.h"
 
 
 // Safely release a COM object.

@@ -10,10 +10,10 @@ namespace lazy
 	{
 		if (glfwInit() == GLFW_FALSE)
 		{
-			std::cout << "Could not initialize glfw!" << std::endl; 
+			LOG(ERROR) << "Could not initialize glfw";
 			return false; 
 		}
-		std::cout << "GLFW initialized successfully" << std::endl; 
+		LOG(INFO) << "GLFW initialized successfully";
 
 		// set window hint to NO_API for usage with Vulkan and DirectX
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
@@ -34,7 +34,7 @@ namespace lazy
 		while (!glfwWindowShouldClose(m_MainWindow->getWindow()))
 		{
 			// Render a frame
-			m_Device->m_DevCon->ClearRenderTargetView(m_Device->m_BackBuffer, glm::value_ptr(glm::vec4(0.0f, 0.2f, 0.4f, 1.0f)));
+			m_Device->m_DevCon->ClearRenderTargetView(m_SwapChain->m_BackBuffer, glm::value_ptr(glm::vec4(0.0f, 0.2f, 0.4f, 1.0f)));
 			m_SwapChain->m_SwapChain->Present(0,0);
 			glfwPollEvents(); 
 		}

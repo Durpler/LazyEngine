@@ -32,7 +32,16 @@ namespace lazy
 		virtual void OnCreate() { initialize(); }
 		virtual void OnDestroy() {}
 
-		virtual bool initialize() { return true;  }
+		virtual bool initialize() 
+		{
+			el::Loggers::addFlag(el::LoggingFlag::ColoredTerminalOutput);
+			if (el::Loggers::hasFlag(el::LoggingFlag::ColoredTerminalOutput))
+			{
+				LOG(INFO) << "This log should have color!";
+			}
+
+			return true;  
+		}
 		virtual void run() {}
 
 		/// <summary>

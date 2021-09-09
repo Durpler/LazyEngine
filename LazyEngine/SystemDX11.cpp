@@ -8,7 +8,7 @@ namespace lazy
         HWND wnd = outputWindow.getHwnd();
         
         // zero out the description struct
-        memset(&swapChain.m_SwapChainDesc, 0, sizeof(DXGI_SWAP_CHAIN_DESC));
+        memset(&swapChain.m_SwapChain, 0, sizeof(DXGI_SWAP_CHAIN_DESC));
 
         // one back buffer TODO: boolean bTripleBuffering?
         swapChain.m_SwapChainDesc.BufferCount = 1;
@@ -34,10 +34,11 @@ namespace lazy
             NULL,
             &device.m_DevCon) != S_OK)
         {
-            std::cout << "FAILED to create D3D11 device and swapchain" << std::endl; 
+            
+            LOG(ERROR) << "FAILED to create D3D11 device and swapchain";
             return false; 
         }
-        std::cout << "SUCCESS in creating D3D11 device and swapchain" << std::endl; 
+        LOG(INFO) << "SUCCESS in creating D3D11 device and swapchain";
         
         // set the render target
 
@@ -46,11 +47,11 @@ namespace lazy
         swapChain.m_SwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
 
         // use the back buffer address to create the render target
-        device.m_Device->CreateRenderTargetView(pBackBuffer, NULL, &device.m_BackBuffer);
+        device.m_Device->CreateRenderTargetView(pBackBuffer, NULL, &swapChain.m_BackBuffer);
         pBackBuffer->Release(); 
 
         //set the render target as the back buffer
-        device.m_DevCon->OMSetRenderTargets(1, &device.m_BackBuffer, NULL); 
+        device.m_DevCon->OMSetRenderTargets(1, &swapChain.m_BackBuffer, NULL); 
 
 
         // set the viewport

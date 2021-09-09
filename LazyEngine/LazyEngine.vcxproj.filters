@@ -34,6 +34,12 @@
     <Filter Include="Source Files\Dx11">
       <UniqueIdentifier>{ac1a8d5e-d13e-4363-b14d-25244ba0e026}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{0f8f1fe1-28c4-4aa2-bb3c-74ea54c37c43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common\easylogging">
+      <UniqueIdentifier>{fe1250bb-7fe8-4dfe-aa5e-4e46da964e65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -63,14 +69,29 @@
     <ClInclude Include="AppDX11.h">
       <Filter>Header Files\Dx11</Filter>
     </ClInclude>
-    <ClInclude Include="LazyLogger.h">
-      <Filter>Header Files\Common</Filter>
-    </ClInclude>
     <ClInclude Include="SwapChainDX11.h">
       <Filter>Header Files\Dx11</Filter>
     </ClInclude>
     <ClInclude Include="SystemDX11.h">
       <Filter>Header Files\Dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="LazyMeshFactory.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseMesh.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="LazyStructs.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LazyStaticMesh.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RendererBase.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="easylogging++.h">
+      <Filter>Header Files\Common\easylogging</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +109,12 @@
     </ClCompile>
     <ClCompile Include="SystemDX11.cpp">
       <Filter>Source Files\Dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="LazyMeshFactory.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="easylogging++.cc">
+      <Filter>Header Files\Common\easylogging</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

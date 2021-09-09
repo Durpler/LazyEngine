@@ -78,7 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)LazyEngine/;$(SolutionDir)ThirdParty/glfw3/include/;$(SolutionDir)ThirdParty/glm/include/;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)LazyEngine/;$(SolutionDir)ThirdParty/glfw3/include/;$(SolutionDir)ThirdParty/glm/include/;$(SolutionDir)ThirdParty/easyloggingpp/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

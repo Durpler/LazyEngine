@@ -1,0 +1,25 @@
+2021-08-29 20:31:51,894 INFO [default] GLFW initialized successfully
+2021-08-29 20:32:47,474 INFO [default] GLFW initialized successfully
+2021-08-29 20:33:02,774 INFO [default] Hello Log
+2021-08-29 20:35:15,077 INFO [default] GLFW initialized successfully
+2021-08-29 20:35:15,582 INFO [default] SUCCESS in creating D3D11 device and swapchain
+2021-08-29 20:40:33,353 INFO [default] GLFW initialized successfully
+2021-08-29 20:40:33,442 INFO [default] SUCCESS in creating D3D11 device and swapchain
+2021-08-29 20:41:33,064 INFO [default] GLFW initialized successfully
+2021-08-29 20:41:33,160 INFO [default] SUCCESS in creating D3D11 device and swapchain
+2021-08-29 20:41:57,359 ERROR [default] Test
+2021-08-29 20:49:12,916 INFO Log using default file
+%date GLFW initialized successfully
+%date SUCCESS in creating D3D11 device and swapchain
+%date Hello Log
+2021-08-29 20:50:49,746 INFO [default] This log should have color!
+2021-08-29 20:50:50,097 INFO [default] GLFW initialized successfully
+2021-08-29 20:50:50,193 INFO [default] SUCCESS in creating D3D11 device and swapchain
+2021-08-29 20:50:59,560 INFO [default] Hello Log
+2021-08-29 20:52:02,892 INFO [default] This log should have color!
+2021-08-29 20:52:03,247 INFO [default] GLFW initialized successfully
+2021-08-29 20:52:03,347 INFO [default] SUCCESS in creating D3D11 device and swapchain
+2021-08-29 20:52:04,830 INFO [default] Hello Log
+2021-08-29 22:37:57,711 INFO [default] This log should have color!
+2021-08-29 22:37:58,068 INFO [default] GLFW initialized successfully
+2021-08-29 22:37:58,171 INFO [default] SUCCESS in creating D3D11 device and swapchain
