@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -158,6 +158,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AppDX11.h" />
+    <ClInclude Include="AppGL.h" />
     <ClInclude Include="BaseMesh.h" />
     <ClInclude Include="DeviceBase.h" />
     <ClInclude Include="DeviceDX11.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="SwapChainDX11.h" />
     <ClInclude Include="SystemBase.h" />
     <ClInclude Include="SystemDX11.h" />
+    <ClInclude Include="SystemGL.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppDX11.cpp" />
@@ -188,6 +190,7 @@
     </ClCompile>
     <ClCompile Include="SwapChainDX11.cpp" />
     <ClCompile Include="SystemDX11.cpp" />
+    <ClCompile Include="SystemGL.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
